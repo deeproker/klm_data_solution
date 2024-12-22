@@ -9,8 +9,8 @@ src/: Contains all source code files.
     data_aggregator.py: Aggregates the transformed data.
     arg_parser.py: Parses command-line arguments.
     
-tests/: Contains all test scripts.
-dist/ : klm_data_analysis-0.1-py3-none-any.whl 
+tests/: Contains all test scripts.\n
+dist/ : klm_data_analysis-0.1-py3-none-any.whl \n
 setup.py: Script for packaging and distributing the package.
 requirements.txt: List of Python dependencies.
 README.md: Project information and instructions.
