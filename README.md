@@ -1,25 +1,20 @@
 # KLM Data Analysis
 
 ## Project Structure - >
-data/: Contains the sample data for airports and bookings .
-src/: Contains all source code files.
+- data/: Contains the sample data for airports and bookings .
+- src/: Contains all source code files.
 
     data_loader.py: Logic for loading airport and booking data.
     data_transformer.py: Transforms raw data into structured data.
     data_aggregator.py: Aggregates the transformed data.
     arg_parser.py: Parses command-line arguments.
     
-tests/: Contains all test scripts.
-
-dist/ : klm_data_analysis-0.1-py3-none-any.whl 
-
-setup.py: Script for packaging and distributing the package.
-
-requirements.txt: List of Python dependencies.
-
-README.md: Project information and instructions.
-
-coverage_results/ : Test cases coverage for all components.
+- tests/: Contains all test scripts.
+- dist/ : klm_data_analysis-0.1-py3-none-any.whl 
+- setup.py: Script for packaging and distributing the package.
+- requirements.txt: List of Python dependencies.
+- README.md: Project information and instructions.
+- coverage_results/ : Test cases coverage for all components.
 
 ## Usage 1
 
@@ -70,10 +65,10 @@ Passenger_Flight_leg_id = Combination of Departure datetime , Departing airport 
 - pyspark
 
 ### Install dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ### Build and install package (if necessary)
-python setup.py install
+- python setup.py install
 
 
 ## Command-Line Arguments ->
@@ -83,16 +78,16 @@ python setup.py install
 --booking_data_path: File path to the bookings data JSON file.
 
 ## Unit test running using Docker- >
-Dockerfile -- > Contains spark image with python package and scripts to run the unit tests.
-docker-compose.yml will publish the coverage_test results in your location (mounted volume ) from where docker-compose build will run.
+- Dockerfile -- > Contains spark image with python package and scripts to run the unit tests.
+- docker-compose.yml will publish the coverage_test results in your location (mounted volume ) from where docker-compose build will run.
 
 ## steps for tests :
 cd klm_data_analytics
 ## option 1:
-docker-compose up --build
-you will get latest test coverage results in new sub folder coverage_results
+- docker-compose up --build
+- you will get latest test coverage results in new sub folder coverage_results
 ## option 2 without using Docker :
-pip install --no-cache-dir -r requirements.txt
-coverage run -m unittest discover -s tests
-coverage html
+- pip install --no-cache-dir -r requirements.txt
+- coverage run -m unittest discover -s tests
+- coverage html
 
