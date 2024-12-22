@@ -86,6 +86,8 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 
 --booking_data_path: File path to the bookings data JSON file.
 
+--output_data_path : Path to write your aggregated data after transformation.
+
 ## Unit test running using Docker
 - Dockerfile -- > Contains spark image with python package and scripts to run the unit tests.
 - docker-compose.yml will publish the coverage_test results in your location (mounted volume ) from where docker-compose build will run.
