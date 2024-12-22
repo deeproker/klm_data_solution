@@ -9,11 +9,16 @@ src/: Contains all source code files.
     data_aggregator.py: Aggregates the transformed data.
     arg_parser.py: Parses command-line arguments.
     
-tests/: Contains all test scripts.\n
-dist/ : klm_data_analysis-0.1-py3-none-any.whl \n
+tests/: Contains all test scripts.
+
+dist/ : klm_data_analysis-0.1-py3-none-any.whl 
+
 setup.py: Script for packaging and distributing the package.
+
 requirements.txt: List of Python dependencies.
+
 README.md: Project information and instructions.
+
 coverage_results/ : Test cases coverage for all components.
 
 ## Usage 1
@@ -27,31 +32,21 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 
 
 ## Sample Output -> 
+
 +-----------+-----------+------+---------+---------+---------------------+      
 |Country    |day_of_week|season|Adt_count|Chd_count|total_passenger_count|
+
 +-----------+-----------+------+---------+---------+---------------------+
 |Netherlands|Mon        |Spring|1014     |20       |1034                 |
+
 |Netherlands|Sun        |Spring|752      |12       |764                  |
+
 |Netherlands|Fri        |Spring|417      |13       |430                  |
+
 |Netherlands|Tue        |Spring|409      |10       |419                  |
+
 |Netherlands|Wed        |Spring|414      |4        |418                  |
-|Netherlands|Thu        |Spring|368      |3        |371                  |
-|Netherlands|Sat        |Spring|308      |3        |311                  |
-|Netherlands|Sat        |Summer|127      |5        |132                  |
-|Netherlands|Fri        |Summer|111      |14       |125                  |
-|Netherlands|Tue        |Summer|104      |15       |119                  |
-|Netherlands|Sun        |Summer|109      |6        |115                  |
-|Netherlands|Wed        |Summer|103      |8        |111                  |
-|Netherlands|Thu        |Summer|82       |9        |91                   |
-|Netherlands|Mon        |Summer|80       |6        |86                   |
-|Netherlands|Fri        |Fall  |39       |1        |40                   |
-|Netherlands|Thu        |Fall  |33       |3        |36                   |
-|Netherlands|Tue        |Winter|31       |4        |35                   |
-|Netherlands|Sun        |Winter|28       |4        |32                   |
-|Netherlands|Sat        |Winter|31       |1        |32                   |
-|Netherlands|Fri        |Winter|25       |6        |31                   |
-+-----------+-----------+------+---------+---------+---------------------+
-only showing top 20 rows
+
 
 
 ## Overview
