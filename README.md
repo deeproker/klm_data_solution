@@ -37,7 +37,7 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 
 
 
-## Sample Output -> 
+## Sample Output 
 
 +-----------+-----------+------+---------+---------+---------------------+     
 
@@ -77,13 +77,13 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 - python setup.py install
 
 
-## Command-Line Arguments ->
+## Command-Line Arguments 
 --start_date: Start date for filtering bookings (format: YYYY-MM-DD).
 --end_date: End date for filtering bookings (format: YYYY-MM-DD).
 --airport_data_path: File path to the airport data .dat/csv file.
 --booking_data_path: File path to the bookings data JSON file.
 
-## Unit test running using Docker- >
+## Unit test running using Docker
 - Dockerfile -- > Contains spark image with python package and scripts to run the unit tests.
 - docker-compose.yml will publish the coverage_test results in your location (mounted volume ) from where docker-compose build will run.
 
