@@ -79,8 +79,11 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 
 ## Command-Line Arguments 
 --start_date: Start date for filtering bookings (format: YYYY-MM-DD).
+
 --end_date: End date for filtering bookings (format: YYYY-MM-DD).
+
 --airport_data_path: File path to the airport data .dat/csv file.
+
 --booking_data_path: File path to the bookings data JSON file.
 
 ## Unit test running using Docker
@@ -88,7 +91,7 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 - docker-compose.yml will publish the coverage_test results in your location (mounted volume ) from where docker-compose build will run.
 
 ## steps for tests :
-cd klm_data_analytics
+- cd klm_data_analytics
 ## option 1:
 - docker-compose up --build
 - you will get latest test coverage results in new sub folder coverage_results
