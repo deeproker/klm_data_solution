@@ -2,7 +2,7 @@
 
 ## Overview
 
-The aggregated metrics (ADT_Counts , CHD_Counts and Total_passenger_counts ) is based on departure date and timezone of the departing airport .
+The aggregated metrics (count of adults , count of childs and total count of passenger per flight leg ) is based on departure date and timezone of the departing airport .
 Passenger_Flight_leg_id = Combination of Departure datetime , Departing airport , uci of passenger - > For per passenger per flight leg.
 
 ## Project Structure 
