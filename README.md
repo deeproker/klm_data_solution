@@ -38,6 +38,7 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 |Country    |day_of_week|season|Adt_count|Chd_count|total_passenger_count|
 
 +-----------+-----------+------+---------+---------+---------------------+
+
 |Netherlands|Mon        |Spring|1014     |20       |1034                 |
 
 |Netherlands|Sun        |Spring|752      |12       |764                  |
