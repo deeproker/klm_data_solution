@@ -1,6 +1,11 @@
 # KLM Data Analysis
 
-## Project Structure - >
+## Overview
+
+The aggregated metrics (ADT_Counts , CHD_Counts and Total_passenger_counts ) is based on departure date and timezone of the departing airport .
+Passenger_Flight_leg_id = Combination of Departure datetime , Departing airport , uci of passenger - > For per passenger per flight leg.
+
+## Project Structure 
 data/: Contains the sample data for airports and bookings .
 
 src/: Contains all source code files.
@@ -52,11 +57,6 @@ python main.py --start_date '1990-12-01' --end_date '2024-12-31' --airport_data_
 
 
 
-## Overview
-
-The aggregated metrics (ADT_Counts , CHD_Counts and Total_passenger_counts ) is based on departure date and timezone of the departing airport .
-
-Passenger_Flight_leg_id = Combination of Departure datetime , Departing airport , uci of passenger - > For per passenger per flight leg.
 
 ## Features
 - Load data from csv and json files using PySpark.
