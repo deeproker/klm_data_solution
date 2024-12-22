@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: klm_data_analysis
+Version: 0.1.0
+Summary: A package for KLM data analysis
+Author: depankar sarkar
+Author-email: depankar.sarkar2015@example.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyspark
+Requires-Dist: discover
+Requires-Dist: coverage
