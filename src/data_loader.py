@@ -1,5 +1,10 @@
 from src.spark_session_manager import SparkSessionManager
 from pyspark.sql.types import StructType, StructField, StringType, FloatType, IntegerType, DoubleType, ArrayType, BooleanType
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 class DataLoader:
     def __init__(self, airport_data_path, booking_data_path):
@@ -62,25 +67,31 @@ class DataLoader:
     # Method to load the airports data
     def load_airports(self):
         try:
-            return self.spark.read.csv(
+            logger.info("Loading airport data from: %s", self.airport_data_path)
+            airports_df = self.spark.read.csv(
                 self.airport_data_path,
                 header=False,
                 schema=self.airport_schema,
                 encoding="UTF-8",
                 mode="PERMISSIVE"
             )
+            logger.info("Successfully loaded airport data.")
+            return airports_df
         except Exception as e:
-            print(f"Error loading airport data: {e}")
+            logger.error("Error loading airport data: %s", e, exc_info=True)
             return None
 
     # Method to load the bookings data
     def load_bookings(self):
         try:
-            return self.spark.read.json(
+            logger.info("Loading booking data from: %s", self.booking_data_path)
+            bookings_df = self.spark.read.json(
                 self.booking_data_path,
                 schema=self.booking_schema,
                 mode="PERMISSIVE"
             )
+            logger.info("Successfully loaded booking data.")
+            return bookings_df
         except Exception as e:
-            print(f"Error loading bookings data: {e}")
+            logger.error("Error loading bookings data: %s", e, exc_info=True)
             return None
