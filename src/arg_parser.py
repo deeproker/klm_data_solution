@@ -1,13 +1,22 @@
 import argparse
+import logging
 
-""" Argument parser will initialise the parsing od the inputs of users"""
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
 class ArgParser:
-    """initialitize the parser"""
+    """Initialize the parser."""
     def __init__(self):
         self.parser = argparse.ArgumentParser(description='KLM Data Analysis')
-        self._setup_arguments()
+        try:
+            self._setup_arguments()
+            logger.info("Arguments setup successfully.")
+        except Exception as e:
+            logger.error("Error setting up arguments: %s", e, exc_info=True)
+            raise
 
-    """set up the arguments here"""
+    """Set up the arguments here."""
     def _setup_arguments(self):
         """Set up command-line arguments."""
         self.parser.add_argument('-s', '--start_date', type=str, 
@@ -28,4 +37,10 @@ class ArgParser:
 
     def parse(self):
         """Parse the command-line arguments."""
-        return self.parser.parse_args()
+        try:
+            args = self.parser.parse_args()
+            logger.info("Arguments parsed successfully.")
+            return args
+        except Exception as e:
+            logger.error("Error parsing arguments: %s", e, exc_info=True)
+            raise
